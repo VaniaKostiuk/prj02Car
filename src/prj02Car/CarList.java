@@ -21,8 +21,9 @@ public class CarList {
 	public void print() {
 		for (int i = 0; i < size(); i++) {
 		System.out.println(cars[i]);
+		}
 	}
-	}
+	
 	public void printCarsByName (String name) {
 		for (int i = 0; i < size(); i++) {
 			if(cars[i].getName().equals(name)) {
@@ -39,5 +40,26 @@ public class CarList {
 		}
 	return CarsByName ;
 	}
+	
+	public CarList getCarsByModelYearN (String model,int yearOfOperation,  int thisYear ) {
+		CarList CarsByModelYearN = new CarList ();
+		for (int i = 0; i < size(); i++) {
+				if(cars[i].getModel().equals(model) && (thisYear - cars[i].getYear())>yearOfOperation) {
+					System.out.println(cars[i]);
+				}
+			}
+		return CarsByModelYearN ;
+		}
+	
+	public CarList getCarsByYearNPriceN (int year , int price) {
+		CarList CarsByYearNPriceN = new CarList ();
+		for (int i = 0; i < size(); i++) {
+				if(cars[i].getYear()==year && cars[i].getPrice()>price) {
+					System.out.println(cars[i]);
+				}
+			}
+		return CarsByYearNPriceN ;
+		}
+	
 }
 
