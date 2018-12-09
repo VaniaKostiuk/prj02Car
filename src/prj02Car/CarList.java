@@ -1,9 +1,5 @@
 package prj02Car;
 
-
-
-
-
 public class CarList {
 	private Car [] cars ;
 	private int count ;
@@ -28,19 +24,20 @@ public class CarList {
 	}
 	}
 	public void printCarsByName (String name) {
-		for (int i = 0; i < i.size(); i++) {
+		for (int i = 0; i < size(); i++) {
 			if(cars[i].getName().equals(name)) {
 				System.out.println(cars[i]);
 			}
 		}
 	}
-	public void getCarsByName (String name) {
-	CarList CarsByName =new CarList ();
-	for (int i = 0; i < i.size(); i++) {
+	public CarList getCarsByName (String name) {
+	CarList CarsByName = new CarList ();
+	for (int i = 0; i < size(); i++) {
 			if(cars[i].getName().equals(name)) {
 				System.out.println(cars[i]);
 			}
 		}
+	return CarsByName ;
 	}
 }
 
