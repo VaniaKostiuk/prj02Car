@@ -1,4 +1,6 @@
-package prj02Car;
+package ua.univer.cars.controller;
+
+import ua.univer.cars.model.Car;
 
 public class CarList {
 	private Car [] cars ;
@@ -13,6 +15,9 @@ public class CarList {
 	}
 	public Car get(int i){
 		return cars[i];
+	}
+	public void set(int i , Car c) {
+		cars[i]=c;
 	}
 	public int size(){
 		return count+1;

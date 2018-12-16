@@ -1,4 +1,8 @@
-package prj02Car;
+package ua.univer.cars.view;
+
+import ua.univer.cars.controller.CarList;
+import ua.univer.cars.model.Car;
+import ua.univer.cars.util.Cars;
 
 public class ProgramCar {
 
@@ -21,6 +25,15 @@ public class ProgramCar {
 		
 		CarList carsVaz1980p1000 = carList.getCarsByYearNPriceN(1980, 1000);
 		carsVaz1980p1000.print();
+		System.out.println("***********************");
+		
+		Cars.SortByModel(carList);
+		carList.print();
+		System.out.println("***********************");
+		
+		Cars.SortByYears(carList);
+		carList.print();
+		System.out.println("***********************");
 	}
 
 }

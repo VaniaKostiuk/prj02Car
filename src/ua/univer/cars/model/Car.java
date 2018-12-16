@@ -1,4 +1,4 @@
-package prj02Car;
+package ua.univer.cars.model;
 
 public class Car {
 	
